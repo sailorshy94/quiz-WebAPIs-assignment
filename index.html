@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Minified version -->
-    <!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <!-- Un-Minified version -->
-    <!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css"> -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
     <title>JavaScript Quiz</title>
 </head>
 
@@ -22,11 +22,11 @@
     <main style = text-align:center>
         <h1>JavaScript Quiz</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iste qui facere quos perferendis eius consequatur itaque, et recusandae minima neque exercitationem, error animi quae illum id! Ipsa, commodi expedita.</p>
-        <button>Begin</button>
+        <button id="begin">Begin</button>
     </main>
 
     <!-- section for quiz Q & A page -->
-    <div class="quizElements" style="text-align:center;">
+    <div class="quiz-elements" style="text-align:center;">
         <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
         <h3 id="h3">a. text</h3>
         <h3 id="h3">b. text</h3>
@@ -79,7 +79,7 @@
     <!-- Final Score & Submission-->
     <div style="text-align:center;">
         <h2>You did it!!!</h2>
-        <h3>You scored: # points</h3>
+        <div id="score" style="font-weight:bold;">Your score: </div>
         <form>
             <div>
                 <label for="name">Your name:</label>
@@ -90,7 +90,15 @@
     </div>
 
      <!-- high scores pg -->
-     <!--  -->
+    <div style="text-align:center;">
+        <h2>High Scores</h2>
+        <div>
+        </div>
+        <nav>
+            <button id="again">Repeat Quiz</button>
+            <button id="clear">Clear High Scores</button>
+        </nav>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>
