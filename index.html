@@ -12,95 +12,62 @@
 </head>
 
 <!-- Start page -->
+
 <body>
 
     <header>
-            <div>View Highscores</div>
-            <div>Time Left:</div>
+        <div>View Highscores</div>
+        <div id="timer">Time Left:</div>
     </header>
 
-    <main style = text-align:center>
-        <h1>JavaScript Quiz</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iste qui facere quos perferendis eius consequatur itaque, et recusandae minima neque exercitationem, error animi quae illum id! Ipsa, commodi expedita.</p>
-        <button id="begin">Begin</button>
-    </main>
+    <div class="container">
+        <main class="start" style=text-align:center>
+            <h1>JavaScript Quiz</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iste qui facere quos perferendis eius
+                consequatur itaque, et recusandae minima neque exercitationem, error animi quae illum id! Ipsa, commodi
+                expedita.</p>
+            <button id="begin">Begin</button>
+        </main>
+    </div>
 
     <!-- section for quiz Q & A page -->
-    <div class="quiz-elements" style="text-align:center;">
-        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-        <h3 id="h3">a. text</h3>
-        <h3 id="h3">b. text</h3>
-        <h3 id="h3">c. text</h3>
-        <h3 id="h3">d. text</h3>
+    <div class="container" style="text-align:center;">
+        <section class="quiz">
+            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
+            <h3 id="h3">a. text</h3>
+            <h3 id="h3">b. text</h3>
+            <h3 id="h3">c. text</h3>
+            <h3 id="h3">d. text</h3>
+        </section>
 
-        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-        <h3 id="h3">a. text</h3>
-        <h3 id="h3">b. text</h3>
-        <h3 id="h3">c. text</h3>
-        <h3 id="h3">d. text</h3>
-
-        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-        <h3 id="h3">a. text</h3>
-        <h3 id="h3">b. text</h3>
-        <h3 id="h3">c. text</h3>
-        <h3 id="h3">d. text</h3>
-
-        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-        <h3 id="h3">a. text</h3>
-        <h3 id="h3">b. text</h3>
-        <h3 id="h3">c. text</h3>
-        <h3 id="h3">d. text</h3>
-
-        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-        <h3 id="h3">a. text</h3>
-        <h3 id="h3">b. text</h3>
-        <h3 id="h3">c. text</h3>
-        <h3 id="h3">d. text</h3>
-
-        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-        <h3 id="h3">a. text</h3>
-        <h3 id="h3">b. text</h3>
-        <h3 id="h3">c. text</h3>
-        <h3 id="h3">d. text</h3>
-
-        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-        <h3 id="h3">a. text</h3>
-        <h3 id="h3">b. text</h3>
-        <h3 id="h3">c. text</h3>
-        <h3 id="h3">d. text</h3>
-
-        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</h2>
-        <h3 id="h3">a. text</h3>
-        <h3 id="h3">b. text</h3>
-        <h3 id="h3">c. text</h3>
-        <h3 id="h3">d. text</h3>
-    </div>
-
-    <!-- Final Score & Submission-->
-    <div style="text-align:center;">
-        <h2>You did it!!!</h2>
-        <div id="score" style="font-weight:bold;">Your score: </div>
-        <form>
-            <div>
-                <label for="name">Your name:</label>
-                <input type="text" id="name" name="name"/>
-                <input type="submit"/>
-            </div>
-        </form>
-    </div>
-
-     <!-- high scores pg -->
-    <div style="text-align:center;">
-        <h2>High Scores</h2>
-        <div>
+        <!-- Final Score & Submission-->
+        <div class="container" style="text-align:center;">
+            <section class="complete">
+                <h2>You did it!!!</h2>
+                <h3 id="score" style="font-weight:bold;">Your score: </h3>
+                <form>
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" />
+                        <input type="submit" />
+                    </div>
+                </form>
+            </section>
         </div>
-        <nav>
-            <button id="again">Repeat Quiz</button>
-            <button id="clear">Clear High Scores</button>
-        </nav>
-    </div>
 
-    <script src="./assets/js/script.js"></script>
+        <!-- high scores pg -->
+        <div class="container" style="text-align:center;">
+            <section class="end">
+            <h2>High Scores</h2>
+            <div></div>
+            <nav>
+                <button id="again">Repeat Quiz</button>
+                <button id="clear">Clear High Scores</button>
+            </nav>
+        </section>
+        </div>
+
+        <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
