@@ -2,7 +2,6 @@ var startPage = document.querySelector("#start");
 var completePage = document.querySelector("#complete");
 var scoresPage = document.querySelector("#scores");
 var beginButton = document.querySelector("#begin-button");
-var correctAnswer = document.querySelector(".correct");
 
 function showStartPage() {
     startPage.style.display = null;
@@ -46,6 +45,7 @@ var question3 = document.querySelector("#quiz-3");
 var question4 = document.querySelector("#quiz-4");
 var question5 = document.querySelector("#quiz-5");
 var question6 = document.querySelector("#quiz-6");
+var correctAnswer = document.querySelector(".correct");
 
 function showQuestion1() {
     startPage.style.display = "none";
@@ -127,6 +127,12 @@ question1.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         showQuestion2();
     }
+
+    if (event.target === correctAnswer){
+        console.log("correct");
+    } else {
+        console.log("incorrect");
+    }
 });
 
 question2.addEventListener("click", function (event) {
@@ -174,7 +180,6 @@ init();
 //         console.log("yes");
 //     }
 // });
-
 
 
 // submit name and score - form tag
