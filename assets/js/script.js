@@ -1,5 +1,5 @@
 var startPage = document.querySelector("#start");
-var quizPage = document.querySelector("#quiz");
+var quizPage = document.querySelector(".quiz-El");
 var completePage = document.querySelector("#complete");
 var scoresPage = document.querySelector("#scores");
 var beginButton = document.querySelector("#begin-button");
@@ -42,3 +42,10 @@ function init() {
 }
 
 init();
+
+// submit name and score - form tag
+// var formSubmission = document.querySelector("#submit");
+
+// formSubmission.addEventListener("click", function(event){
+
+// });
