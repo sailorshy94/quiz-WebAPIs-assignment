@@ -3,6 +3,8 @@ var quizPage = document.querySelector(".quiz-El");
 var completePage = document.querySelector("#complete");
 var scoresPage = document.querySelector("#scores");
 var beginButton = document.querySelector("#begin-button");
+var quizEl1 = document.querySelector("#quiz-1");
+var correctAnswer = document.querySelector(".correct");
 
 
 function showStartPage() {
@@ -41,9 +43,15 @@ beginButton.addEventListener("click", function(event) {
 // quiz answers function TEST
 quizPage.addEventListener("click", function(event){
     if (event.target.matches("button")) {
-        showCompletePage();
+       console.log("clicked");
+    }
+
+    if (event.target === correctAnswer){
+        console.log("yes");
     }
 });
+
+
 
 function init() {
     showStartPage();
