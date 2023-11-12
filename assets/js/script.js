@@ -1,6 +1,7 @@
 var startPage = document.querySelector("#start");
 var completePage = document.querySelector("#complete");
 var scoresPage = document.querySelector("#scores");
+var startScoresPage = document.querySelector("#view-scores-start");
 var beginButton = document.querySelector("#begin-button");
 var question1 = document.querySelector("#quiz-1");
 var question2 = document.querySelector("#quiz-2");
@@ -10,6 +11,7 @@ var question5 = document.querySelector("#quiz-5");
 var question6 = document.querySelector("#quiz-6");
 var correctAnswer = document.querySelector(".correct");
 var repeatQuizBtn = document.querySelector("#again");
+var repeatQuizBtn2 = document.querySelector("#again-2");
 var highScoresBtn = document.querySelector("#high-scores");
 
 function showStartPage() {
@@ -126,11 +128,21 @@ function playAgain() {
     })
 };
 
+function playAgain2 (){
+    repeatQuizBtn2.addEventListener("click", function (event){
+        showStartPage();
+    })
+};
+
 function viewScores (){
     highScoresBtn.addEventListener("click", function (event){
         showScoresPage();
     })
 }
+
+startScoresPage.addEventListener("click", function(event){
+    showScoresPage();
+});
 
 beginButton.addEventListener("click", function (event) {
     showQuestion1();
@@ -181,19 +193,15 @@ question6.addEventListener("click", function (event) {
 completePage.addEventListener("click", function (event) {
     playAgain();
     viewScores();
-
 });
-// does not work
-// scoresPage.addEventListener("click", function (event){
-//     if (event.target === repeatQuizBtn){
-//         showStartPage();
-//     }
-// })
+
+scoresPage.addEventListener("click", function (event){
+    playAgain2();
+});
 
 function init() {
     showStartPage();
 }
-
 
 init();
 
