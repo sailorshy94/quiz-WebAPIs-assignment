@@ -4,3 +4,9 @@
     box-sizing: border-box;
     cursor: pointer;
 }
+
+.container, .start, .quiz, .complete, .end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
