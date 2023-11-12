@@ -2,6 +2,7 @@ var startPage = document.querySelector("#start");
 var quizPage = document.querySelector("#quiz");
 var completePage = document.querySelector("#complete");
 var scoresPage = document.querySelector("#scores");
+var beginButton = document.querySelector("#begin-button");
 
 
 function showStartPage() {
@@ -32,9 +33,12 @@ function showScoresPage() {
     scoresPage.style.display = null;
 }
 
+beginButton.addEventListener("click", function(event) {
+    showQuizPage();
+});
+
 function init() {
     showStartPage();
 }
 
 init();
-
