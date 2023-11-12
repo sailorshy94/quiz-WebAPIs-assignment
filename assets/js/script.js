@@ -37,9 +37,18 @@ beginButton.addEventListener("click", function(event) {
     showQuizPage();
 });
 
+
+// quiz answers function TEST
+quizPage.addEventListener("click", function(event){
+    if (event.target.matches("button")) {
+        showCompletePage();
+    }
+});
+
 function init() {
     showStartPage();
 }
+
 
 init();
 
