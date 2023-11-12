@@ -2,6 +2,15 @@ var startPage = document.querySelector("#start");
 var completePage = document.querySelector("#complete");
 var scoresPage = document.querySelector("#scores");
 var beginButton = document.querySelector("#begin-button");
+var question1 = document.querySelector("#quiz-1");
+var question2 = document.querySelector("#quiz-2");
+var question3 = document.querySelector("#quiz-3");
+var question4 = document.querySelector("#quiz-4");
+var question5 = document.querySelector("#quiz-5");
+var question6 = document.querySelector("#quiz-6");
+var correctAnswer = document.querySelector(".correct");
+var repeatQuizBtn = document.querySelector("#again");
+var highScoresBtn = document.querySelector("#high-scores");
 
 function showStartPage() {
     startPage.style.display = null;
@@ -38,14 +47,6 @@ function showScoresPage() {
     question5.style.display = "none";
     question6.style.display = "none";
 }
-
-var question1 = document.querySelector("#quiz-1");
-var question2 = document.querySelector("#quiz-2");
-var question3 = document.querySelector("#quiz-3");
-var question4 = document.querySelector("#quiz-4");
-var question5 = document.querySelector("#quiz-5");
-var question6 = document.querySelector("#quiz-6");
-var correctAnswer = document.querySelector(".correct");
 
 function showQuestion1() {
     startPage.style.display = "none";
@@ -119,6 +120,13 @@ function showQuestion6() {
     question6.style.display = null;
 }
 
+function playAgain() {
+    repeatQuizBtn.addEventListener("click", function (event) {
+        // showStartPage();
+        console.log("play again");
+    })
+};
+
 beginButton.addEventListener("click", function (event) {
     showQuestion1();
 });
@@ -128,7 +136,7 @@ question1.addEventListener("click", function (event) {
         showQuestion2();
     }
 
-    if (event.target === correctAnswer){
+    if (event.target === correctAnswer) {
         console.log("correct");
     } else {
         console.log("incorrect");
@@ -165,18 +173,16 @@ question6.addEventListener("click", function (event) {
     }
 });
 
-var repeatQuizBtn = document.querySelector("#again");
-var highScoresBtn = document.querySelector("#high-scores");
-
 completePage.addEventListener("click", function (event) {
-    if (event.target === repeatQuizBtn){
-        showStartPage();
-    } else {
-        if (event.target === highScoresBtn){
-            showScoresPage();
-        }
-    }
+    playAgain();
 });
+
+// does not work
+// scoresPage.addEventListener("click", function (event){
+//     if (event.target === repeatQuizBtn){
+//         showStartPage();
+//     }
+// })
 
 function init() {
     showStartPage();
@@ -184,16 +190,6 @@ function init() {
 
 
 init();
-// question1.addEventListener("click", function(event){
-//     if (event.target.matches("button")) {
-//        console.log("clicked");
-//     }
-
-//     if (event.target === correctAnswer){
-//         console.log("yes");
-//     }
-// });
-
 
 // submit name and score - form tag
 // var formSubmission = document.querySelector("#submit");
