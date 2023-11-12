@@ -122,10 +122,15 @@ function showQuestion6() {
 
 function playAgain() {
     repeatQuizBtn.addEventListener("click", function (event) {
-        // showStartPage();
-        console.log("play again");
+        showStartPage();
     })
 };
+
+function viewScores (){
+    highScoresBtn.addEventListener("click", function (event){
+        showScoresPage();
+    })
+}
 
 beginButton.addEventListener("click", function (event) {
     showQuestion1();
@@ -175,8 +180,9 @@ question6.addEventListener("click", function (event) {
 
 completePage.addEventListener("click", function (event) {
     playAgain();
-});
+    viewScores();
 
+});
 // does not work
 // scoresPage.addEventListener("click", function (event){
 //     if (event.target === repeatQuizBtn){
