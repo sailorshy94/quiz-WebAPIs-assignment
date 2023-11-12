@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <title>JavaScript Quiz</title>
     <style>
-        .container, .start, .quiz, .complete, .end {
+        .container,
+        .start,
+        .quiz,
+        .complete,
+        .end {
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -19,7 +30,7 @@
 
 <body>
 
-    <header>
+    <header class="header">
         <div>View Highscores</div>
         <div id="timer">Time Left:</div>
     </header>
@@ -27,9 +38,8 @@
     <div class="container">
         <section class="start">
             <h1>JavaScript Quiz</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iste qui facere quos perferendis eius
-                consequatur itaque, et recusandae minima neque exercitationem, error animi quae illum id! Ipsa, commodi
-                expedita.</p>
+            <p>Hello! Click on the button below to begin your multiple-choice, timed, JavaScript quiz. Please note: for
+                each question answered incorrectly 10 seconds will be removed from the timer. Good luck!</p>
             <button id="begin">Begin</button>
         </section>
     </div>
@@ -105,6 +115,9 @@
                         <input type="submit" />
                     </div>
                 </form>
+                <nav>
+                    <button id="again">Repeat Quiz</button>
+                </nav>
             </section>
         </div>
 
