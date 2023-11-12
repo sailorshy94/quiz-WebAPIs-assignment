@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Minified version -->
-    <!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <!-- Un-Minified version -->
     <!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css"> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> -->
     <title>JavaScript Quiz</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <!-- Start page -->
@@ -22,7 +29,7 @@
     </header>
 
     <div class="container">
-        <main class="start" style="text-align:center;">
+        <main class="start">
             <h1>JavaScript Quiz</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iste qui facere quos perferendis eius
                 consequatur itaque, et recusandae minima neque exercitationem, error animi quae illum id! Ipsa, commodi
@@ -32,7 +39,7 @@
     </div>
 
     <!-- section for quiz Q & A page -->
-    <div class="container" style="text-align:center;">
+    <div class="container">
         <section class="quiz">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</p>
             <button>a. text</button>
@@ -91,7 +98,7 @@
         </section>
 
         <!-- Final Score & Submission-->
-        <div class="container" style="text-align:center;">
+        <div class="container">
             <section class="complete">
                 <h2>You did it!!!</h2>
                 <h3 id="score" style="font-weight:bold;">Your score: </h3>
@@ -106,7 +113,7 @@
         </div>
 
         <!-- high scores pg -->
-        <div class="container" style="text-align:center;">
+        <div class="container">
             <section class="end">
                 <h2>High Scores</h2>
                 <div></div>
