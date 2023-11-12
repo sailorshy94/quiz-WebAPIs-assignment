@@ -58,7 +58,7 @@
             <p>Arrays always start with index position of ____.</p>
             <button>a. 1</button>
             <button>b. 3</button>
-            <button>c. 0</button>
+            <button class="correct">c. 0</button>
             <button>d. i</button>
         </div>
 
@@ -67,13 +67,13 @@
             <button>a. 0</button>
             <button>b. an empty string</button>
             <button>c. null</button>
-            <button>d. true</button>
+            <button class="correct">d. true</button>
         </div>
 
         <div class="container" id="quiz-4">
             <p>Functions in JS are defined as...</p>
             <button>a. a way to iterate code multiple times</button>
-            <button>b. a special kind of variable that can store a specific set of commands</button>
+            <button class="correct">b. a special kind of variable that can store a specific set of commands</button>
             <button>c. snippets of code that are undefined</button>
             <button>d. booleans</button>
         </div>
@@ -83,7 +83,7 @@
             <button>a. it prevents bugs from entering your code</button>
             <button>b. it does not do anything</button>
             <button>c. it removes any breakpoints in your code</button>
-            <button>d. it stops JS from executing, and calls a debug function (if one is present)</button>
+            <button class="correct">d. it stops JS from executing, and calls a debug function (if one is present)</button>
         </div>
 
         <div class="container" id="quiz-6">
@@ -97,8 +97,7 @@
     </section>
 
     <!-- Final Score & Submission-->
-    <div class="container">
-        <section id="complete">
+        <section class="container" id="complete">
             <h2>You did it!!!</h2>
             <!-- do not need h3 here, can be done in JS -->
             <!-- <h3 id="score" style="font-weight:bold;">Your score: </h3> -->
@@ -111,23 +110,19 @@
             </form>
             <nav>
                 <button id="again">Repeat Quiz</button>
-                <a href=""><button>View Highscores</button></a>
+                <button id="high-scores">View Highscores</button>
             </nav>
         </section>
-    </div>
 
     <!-- high scores pg -->
     <!-- not 100% sure how to treat this section of the page yet -->
-    <div class="container">
-        <section id="scores">
+    <section class="container" id="scores">
             <h2>High Scores</h2>
-            <div></div>
             <nav>
-                <button>Repeat Quiz</button>
+                <button id="again">Repeat Quiz</button>
                 <button id="clear">Clear High Scores</button>
             </nav>
-        </section>
-    </div>
+    </section>
 
     <script src="./assets/js/script.js"></script>
 </body>
