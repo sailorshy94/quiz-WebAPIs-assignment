@@ -8,10 +8,10 @@
     <title>JavaScript Quiz</title>
     <style>
         .container,
-        .start,
-        .quiz,
-        .complete,
-        .end {
+        #start,
+        #quiz,
+        #complete,
+        #end {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -36,7 +36,7 @@
     </header>
 
     <div class="container">
-        <section class="start">
+        <section id="start">
             <h1>JavaScript Quiz</h1>
             <p>Hello! Click on the button below to begin your multiple-choice, timed, JavaScript quiz. Please note: for
                 each question answered incorrectly 10 seconds will be removed from the timer. Good luck!</p>
@@ -46,7 +46,7 @@
 
     <!-- section for quiz Q & A page -->
     <div class="container">
-        <section class="quiz">
+        <section id="quiz">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit?</p>
             <button>a. text</button>
             <button>b. text</button>
@@ -105,9 +105,10 @@
 
         <!-- Final Score & Submission-->
         <div class="container">
-            <section class="complete">
+            <section id="complete">
                 <h2>You did it!!!</h2>
-                <h3 id="score" style="font-weight:bold;">Your score: </h3>
+                <!-- do not need h3 here, can be done in JS -->
+                <!-- <h3 id="score" style="font-weight:bold;">Your score: </h3> -->
                 <form>
                     <div>
                         <label for="name">Name:</label>
@@ -123,7 +124,7 @@
 
         <!-- high scores pg -->
         <div class="container">
-            <section class="end">
+            <section id="scores">
                 <h2>High Scores</h2>
                 <div></div>
                 <nav>
