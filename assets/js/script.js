@@ -1,1 +1,12 @@
-console.log("I am a quiz website!");
+function showBeginPage {
+
+}
+
+function showQuizPage {
+
+}
+
+function showCompletePage {
+
+}
+
