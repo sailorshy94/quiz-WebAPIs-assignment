@@ -45,6 +45,7 @@ var question3 = document.querySelector("#quiz-3");
 var question4 = document.querySelector("#quiz-4");
 var question5 = document.querySelector("#quiz-5");
 var question6 = document.querySelector("#quiz-6");
+var correctAnswer = document.querySelector(".correct");
 
 function showQuestion1() {
     startPage.style.display = "none";
@@ -122,8 +123,6 @@ beginButton.addEventListener("click", function (event) {
     showQuestion1();
 });
 
-var correctAnswer = document.querySelector(".correct");
-
 question1.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         showQuestion2();
@@ -140,23 +139,11 @@ question2.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         showQuestion3();
     }
-    
-    if (event.target === correctAnswer){
-        console.log("correct");
-    } else {
-        console.log("incorrect");
-    }
 });
 
 question3.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         showQuestion4();
-    }
-    
-    if (event.target === correctAnswer){
-        console.log("correct");
-    } else {
-        console.log("incorrect");
     }
 });
 
@@ -164,34 +151,17 @@ question4.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         showQuestion5();
     }
-    
-    if (event.target === correctAnswer){
-        console.log("correct");
-    } else {
-        console.log("incorrect");
-    }
 });
 
 question5.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         showQuestion6();
     }
-    
-    if (event.target === correctAnswer){
-        console.log("correct");
-    } else {
-        console.log("incorrect");
-    }
 });
 
 question6.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         showCompletePage();
-    }
-    if (event.target === correctAnswer){
-        console.log("correct");
-    } else {
-        console.log("incorrect");
     }
 });
 
@@ -206,12 +176,6 @@ completePage.addEventListener("click", function (event) {
             showScoresPage();
         }
     }
-});
-
-scoresPage.addEventListener("click", function(event){
-    if (event.target === repeatQuizBtn){
-        showStartPage();
-    } 
 });
 
 function init() {
