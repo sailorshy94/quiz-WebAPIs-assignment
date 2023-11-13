@@ -148,53 +148,62 @@ beginButton.addEventListener("click", function (event) {
     showQuestion1();
 });
 
-question1.addEventListener("click", function (event) {
-    var answer = "c. when a variable is declared locally and globally";
 
+
+function logAnswer(event, answer) {
     if (event.target.innerHTML === answer) {
         console.log("correct");
     } else {
         console.log("incorrect");
     }
+};
+
+question1.addEventListener("click", function (event) {
+    var answer = "c. when a variable is declared locally and globally";
+
+    logAnswer(event, answer);
 
     showQuestion2();
-
 });
 
 question2.addEventListener("click", function (event) {
     var answer = "c. 0";
 
-    if (event.target.innerHTML === answer) {
-        console.log("correct");
-    } else {
-        console.log("incorrect");
-    }
+    logAnswer(event, answer);
 
     showQuestion3();
 });
 
 question3.addEventListener("click", function (event) {
-    if (event.target.matches("button")) {
-        showQuestion4();
-    }
+    var answer = "d. true";
+
+    logAnswer(event, answer);
+
+    showQuestion4();
 });
 
 question4.addEventListener("click", function (event) {
-    if (event.target.matches("button")) {
-        showQuestion5();
-    }
+    var answer = "b. a special kind of variable that can store a specific set of commands";
+
+    logAnswer(event, answer);
+
+    showQuestion5();
 });
 
 question5.addEventListener("click", function (event) {
-    if (event.target.matches("button")) {
-        showQuestion6();
-    }
+    var answer = "d. it stops JS from executing, and calls a debug function (if one is present)";
+
+    logAnswer(event, answer);
+    
+    showQuestion6();
 });
 
 question6.addEventListener("click", function (event) {
-    if (event.target.matches("button")) {
-        showCompletePage();
-    }
+    var answer = "d. numbers";
+
+    logAnswer(event, answer);
+    
+    showCompletePage();
 });
 
 completePage.addEventListener("click", function (event) {
