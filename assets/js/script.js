@@ -254,7 +254,6 @@ function setTimer() {
         timerEl.textContent = timer;
 
         if (timer === 0) {
-            // clearInterval(timerInt);
             showCompletePage();
         }
     }, 1000);
