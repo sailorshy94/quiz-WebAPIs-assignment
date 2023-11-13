@@ -32,7 +32,7 @@
 
     <header class="header">
         <a href="#scores" id="view-scores-start">View Highscores</a>
-        <div id="timer">Time Left:</div>
+        <div>Time Left: <span id="timer"></span>0</div>
     </header>
 
     <div class="container">
@@ -97,27 +97,27 @@
     </section>
 
     <!-- Final Score & Submission-->
-        <section class="container" id="complete">
-            <h2>You did it!!!</h2>
-            <!-- is a form better here?? for name entry?? -->
-            <div class="name-entry">
-                    <input type="text" id="name" placeholder="Enter your name or initials..." />
-                    <button type="submit" id="submit">Enter</button>
-            </div>
-            <nav>
-                <button id="again">Repeat Quiz</button>
-                <button id="high-scores">View Highscores</button>
-            </nav>
-        </section>
+    <section class="container" id="complete">
+        <h2>You did it!!!</h2>
+        <!-- is a form better here?? for name entry?? -->
+        <div class="name-entry">
+            <input type="text" id="name" placeholder="Enter your name or initials..." />
+            <button type="submit" id="submit">Enter</button>
+        </div>
+        <nav>
+            <button id="again">Repeat Quiz</button>
+            <button id="high-scores">View Highscores</button>
+        </nav>
+    </section>
 
     <!-- high scores pg -->
     <!-- not 100% sure how to treat this section of the page yet -->
     <section class="container" id="scores">
-            <h2>High Scores</h2>
-            <nav>
-                <button id="again-2">Repeat Quiz</button>
-                <button id="clear">Clear High Scores</button>
-            </nav>
+        <h2>High Scores</h2>
+        <nav>
+            <button id="again-2">Repeat Quiz</button>
+            <button id="clear">Clear High Scores</button>
+        </nav>
     </section>
 
     <script src="./assets/js/script.js"></script>

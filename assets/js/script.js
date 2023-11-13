@@ -24,7 +24,7 @@ function showStartPage() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-}
+};
 
 function showCompletePage() {
     startPage.style.display = "none";
@@ -36,7 +36,7 @@ function showCompletePage() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-}
+};
 
 function showScoresPage() {
     startPage.style.display = "none";
@@ -48,7 +48,7 @@ function showScoresPage() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-}
+};
 
 function showQuestion1() {
     startPage.style.display = "none";
@@ -60,7 +60,7 @@ function showQuestion1() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-}
+};
 
 function showQuestion2() {
     startPage.style.display = "none";
@@ -72,7 +72,7 @@ function showQuestion2() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-}
+};
 
 function showQuestion3() {
     startPage.style.display = "none";
@@ -84,7 +84,7 @@ function showQuestion3() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-}
+};
 
 function showQuestion4() {
     startPage.style.display = "none";
@@ -96,7 +96,7 @@ function showQuestion4() {
     question4.style.display = null;
     question5.style.display = "none";
     question6.style.display = "none";
-}
+};
 
 function showQuestion5() {
     startPage.style.display = "none";
@@ -108,7 +108,7 @@ function showQuestion5() {
     question4.style.display = "none";
     question5.style.display = null;
     question6.style.display = "none";
-}
+};
 
 function showQuestion6() {
     startPage.style.display = "none";
@@ -120,7 +120,7 @@ function showQuestion6() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = null;
-}
+};
 
 function playAgain() {
     repeatQuizBtn.addEventListener("click", function (event) {
@@ -145,10 +145,19 @@ startScoresPage.addEventListener("click", function (event) {
 });
 
 beginButton.addEventListener("click", function (event) {
+    // setTimer();
     showQuestion1();
 });
 
+// var timer = 70;
+// var timerEl = document.querySelector("#timer");
 
+// function setTimer() {
+//     var timerInt = setInt(function () {
+//         timer--; 
+//         timerEl.textcontent = timer;
+// }, 1000);
+// };
 
 function logAnswer(event, answer) {
     if (event.target.innerHTML === answer) {
@@ -194,7 +203,7 @@ question5.addEventListener("click", function (event) {
     var answer = "d. it stops JS from executing, and calls a debug function (if one is present)";
 
     logAnswer(event, answer);
-    
+
     showQuestion6();
 });
 
@@ -202,7 +211,7 @@ question6.addEventListener("click", function (event) {
     var answer = "d. numbers";
 
     logAnswer(event, answer);
-    
+
     showCompletePage();
 });
 
@@ -211,6 +220,10 @@ completePage.addEventListener("click", function (event) {
     viewScores();
 });
 
+// var named = document.querySelector("#name");
+// var nameEntry = localStorage.getItem("");
+
+// named.textContent = "";
 
 
 scoresPage.addEventListener("click", function (event) {
