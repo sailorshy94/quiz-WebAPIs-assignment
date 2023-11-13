@@ -138,26 +138,16 @@ function viewScores() {
     highScoresBtn.addEventListener("click", function (event) {
         showScoresPage();
     })
-}
+};
 
 startScoresPage.addEventListener("click", function (event) {
     showScoresPage();
 });
 
 beginButton.addEventListener("click", function (event) {
-    // setTimer();
+    setTimer();
     showQuestion1();
 });
-
-// var timer = 70;
-// var timerEl = document.querySelector("#timer");
-
-// function setTimer() {
-//     var timerInt = setInt(function () {
-//         timer--; 
-//         timerEl.textcontent = timer;
-// }, 1000);
-// };
 
 function logAnswer(event, answer) {
     if (event.target.innerHTML === answer) {
@@ -253,3 +243,15 @@ init();
 // formSubmission.addEventListener("click", function(event){
 
 // });
+
+// code for timer
+var timer = 70;
+var timerEl = document.querySelector("#timer");
+
+function setTimer() {
+    var timerInt = setInterval(function () {
+        console.log(timer);
+        timer--; 
+        timerEl.textContent = timer;
+}, 1000);
+};
