@@ -36,6 +36,8 @@ function showCompletePage() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
+
+    clearInterval(timerInt);
 };
 
 function showScoresPage() {
@@ -48,6 +50,13 @@ function showScoresPage() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
+
+    // code retrieved/adapted from https://stackoverflow.com/a/48433421 by Jason
+for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key); 
+    console.log(JSON.parse(value));
+  };
 };
 
 function showQuestion1() {
@@ -154,6 +163,7 @@ function logAnswer(event, answer) {
         console.log("correct");
     } else {
         console.log("incorrect");
+        timer -= 15;
     }
 };
 
@@ -209,8 +219,10 @@ var submitBtn = document.getElementById("submit");
 
 submitBtn.addEventListener("click", function (event) {
     var nameEntry = document.getElementById("name").value;
-    // console.log(nameEntry);
-    localStorage.setItem("name", nameEntry);
+    localStorage.setItem(nameEntry, JSON.stringify({
+        name: nameEntry,
+        score: timer,
+    }));
     console.log(localStorage.getItem("name"));
     viewScores();
 });
@@ -220,15 +232,8 @@ completePage.addEventListener("click", function (event) {
     viewScores();
 });
 
-// var named = document.querySelector("#name");
-// var nameEntry = localStorage.getItem("");
-
-// named.textContent = "";
-
-
 scoresPage.addEventListener("click", function (event) {
     playAgain2();
-    // console.log(localStorage.getItem("name"));
 });
 
 function init() {
@@ -237,21 +242,20 @@ function init() {
 
 init();
 
-// submit name and score - form tag
-// var formSubmission = document.querySelector("#submit");
-
-// formSubmission.addEventListener("click", function(event){
-
-// });
-
 // code for timer
 var timer = 70;
 var timerEl = document.querySelector("#timer");
+var timerInt;
 
 function setTimer() {
-    var timerInt = setInterval(function () {
+    timerInt = setInterval(function () {
         console.log(timer);
-        timer--; 
+        timer--;
         timerEl.textContent = timer;
-}, 1000);
+
+        if (timer === 0) {
+            // clearInterval(timerInt);
+            showCompletePage();
+        }
+    }, 1000);
 };
