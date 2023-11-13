@@ -36,7 +36,6 @@ function showCompletePage() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-
     clearInterval(timerInt);
 };
 
@@ -52,11 +51,11 @@ function showScoresPage() {
     question6.style.display = "none";
 
     // code retrieved/adapted from https://stackoverflow.com/a/48433421 by Jason
-for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    const value = localStorage.getItem(key); 
-    console.log(JSON.parse(value));
-  };
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const value = localStorage.getItem(key);
+        console.log(JSON.parse(value));
+    };
 };
 
 function showQuestion1() {
@@ -233,6 +232,11 @@ completePage.addEventListener("click", function (event) {
 });
 
 scoresPage.addEventListener("click", function (event) {
+    var clearScoresBtn = document.querySelector("#clear");
+    clearScoresBtn.addEventListener("click", function (event) {
+        localStorage.clear();
+    });
+    
     playAgain2();
 });
 
