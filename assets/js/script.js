@@ -217,7 +217,7 @@ question6.addEventListener("click", function (event) {
 var submitBtn = document.getElementById("submit");
 
 submitBtn.addEventListener("click", function (event) {
-    var nameEntry = document.getElementById("name").value;
+    var nameEntry = document.getElementById("name").value.trim();
     localStorage.setItem(nameEntry, JSON.stringify({
         name: nameEntry,
         score: timer,
