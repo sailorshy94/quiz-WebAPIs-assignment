@@ -215,6 +215,16 @@ question6.addEventListener("click", function (event) {
     showCompletePage();
 });
 
+var submitBtn = document.getElementById("submit");
+
+submitBtn.addEventListener("click", function (event) {
+    var nameEntry = document.getElementById("name").value;
+    // console.log(nameEntry);
+    localStorage.setItem("name", nameEntry);
+    console.log(localStorage.getItem("name"));
+    viewScores();
+});
+
 completePage.addEventListener("click", function (event) {
     playAgain();
     viewScores();
@@ -228,6 +238,7 @@ completePage.addEventListener("click", function (event) {
 
 scoresPage.addEventListener("click", function (event) {
     playAgain2();
+    // console.log(localStorage.getItem("name"));
 });
 
 function init() {
