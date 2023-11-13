@@ -9,10 +9,10 @@ var question3 = document.querySelector("#quiz-3");
 var question4 = document.querySelector("#quiz-4");
 var question5 = document.querySelector("#quiz-5");
 var question6 = document.querySelector("#quiz-6");
-var correctAnswer = document.querySelector(".correct");
 var repeatQuizBtn = document.querySelector("#again");
 var repeatQuizBtn2 = document.querySelector("#again-2");
 var highScoresBtn = document.querySelector("#high-scores");
+
 
 function showStartPage() {
     startPage.style.display = null;
@@ -128,19 +128,19 @@ function playAgain() {
     })
 };
 
-function playAgain2 (){
-    repeatQuizBtn2.addEventListener("click", function (event){
+function playAgain2() {
+    repeatQuizBtn2.addEventListener("click", function (event) {
         showStartPage();
     })
 };
 
-function viewScores (){
-    highScoresBtn.addEventListener("click", function (event){
+function viewScores() {
+    highScoresBtn.addEventListener("click", function (event) {
         showScoresPage();
     })
 }
 
-startScoresPage.addEventListener("click", function(event){
+startScoresPage.addEventListener("click", function (event) {
     showScoresPage();
 });
 
@@ -149,21 +149,28 @@ beginButton.addEventListener("click", function (event) {
 });
 
 question1.addEventListener("click", function (event) {
-    if (event.target.matches("button")) {
-        showQuestion2();
-    }
+    var answer = "c. when a variable is declared locally and globally";
 
-    if (event.target === correctAnswer) {
+    if (event.target.innerHTML === answer) {
         console.log("correct");
     } else {
         console.log("incorrect");
     }
+
+    showQuestion2();
+
 });
 
 question2.addEventListener("click", function (event) {
-    if (event.target.matches("button")) {
-        showQuestion3();
+    var answer = "c. 0";
+
+    if (event.target.innerHTML === answer) {
+        console.log("correct");
+    } else {
+        console.log("incorrect");
     }
+
+    showQuestion3();
 });
 
 question3.addEventListener("click", function (event) {
@@ -195,7 +202,9 @@ completePage.addEventListener("click", function (event) {
     viewScores();
 });
 
-scoresPage.addEventListener("click", function (event){
+
+
+scoresPage.addEventListener("click", function (event) {
     playAgain2();
 });
 

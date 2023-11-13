@@ -50,7 +50,7 @@
             <p>What does the term "shawdowing" refer to in JavaScript code?</p>
             <button>a. adding a shadow below it</button>
             <button>b. when the same variable is named multiple times</button>
-            <button class="correct">c. when a variable is declared locally and globally</button>
+            <button>c. when a variable is declared locally and globally</button>
             <button>d. an event where a code snippet has been commented out</button>
         </div>
 
@@ -58,7 +58,7 @@
             <p>Arrays always start with index position of ____.</p>
             <button>a. 1</button>
             <button>b. 3</button>
-            <button class="correct">c. 0</button>
+            <button>c. 0</button>
             <button>d. i</button>
         </div>
 
@@ -99,14 +99,11 @@
     <!-- Final Score & Submission-->
         <section class="container" id="complete">
             <h2>You did it!!!</h2>
-            <!-- do not need h3 here, can be done in JS -->
-            <!-- <h3 id="score" style="font-weight:bold;">Your score: </h3> -->
-            <form>
-                <div>
-                    <input type="text" id="name" name="name" placeholder="Enter your name or initials..." />
-                    <input type="submit" id="submit" />
-                </div>
-            </form>
+            <!-- is a form better here?? for name entry?? -->
+            <div class="name-entry">
+                    <input type="text" id="name" placeholder="Enter your name or initials..." />
+                    <button type="submit" id="submit">Enter</button>
+            </div>
             <nav>
                 <button id="again">Repeat Quiz</button>
                 <button id="high-scores">View Highscores</button>
