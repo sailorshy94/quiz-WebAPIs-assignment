@@ -50,12 +50,7 @@ function showScoresPage() {
     question5.style.display = "none";
     question6.style.display = "none";
 
-    // code retrieved/adapted from https://stackoverflow.com/a/48433421 by Jason
-    for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        const value = localStorage.getItem(key);
-        console.log(JSON.parse(value));
-    };
+//removed code snippet suggested by TA 
 };
 
 function showQuestion1() {
@@ -222,8 +217,6 @@ submitBtn.addEventListener("click", function (event) {
         name: nameEntry,
         score: timer,
     }));
-    console.log(localStorage.getItem("name"));
-    viewScores();
 });
 
 completePage.addEventListener("click", function (event) {
