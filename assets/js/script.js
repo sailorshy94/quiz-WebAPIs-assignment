@@ -218,6 +218,10 @@ submitBtn.addEventListener("click", function (event) {
     }));
 });
 
+submitBtn.addEventListener("dblclick", function () {
+    console.log("click");
+})
+
 completePage.addEventListener("click", function (event) {
     playAgain();
     viewScores();
