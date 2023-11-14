@@ -219,8 +219,8 @@ submitBtn.addEventListener("click", function (event) {
 });
 
 submitBtn.addEventListener("dblclick", function () {
-    console.log("click");
-})
+    showScoresPage();
+});
 
 completePage.addEventListener("click", function (event) {
     playAgain();
