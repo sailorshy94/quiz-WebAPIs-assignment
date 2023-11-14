@@ -49,7 +49,7 @@ function showScoresPage() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-//removed code snippet suggested by TA 
+//removed code snippet suggested by tutor 
 };
 
 function showQuestion1() {
