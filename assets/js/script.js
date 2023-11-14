@@ -227,6 +227,17 @@ completePage.addEventListener("click", function (event) {
     viewScores();
 });
 
+// grabbing scores from local storage and listing on the webpage?
+var scoreLog = document.querySelector("#score-output");
+var scoreEl = document.createElement("li");
+
+function logScores() {
+    if () {
+
+    }
+};
+
+
 scoresPage.addEventListener("click", function (event) {
     var clearScoresBtn = document.querySelector("#clear");
     clearScoresBtn.addEventListener("click", function (event) {
