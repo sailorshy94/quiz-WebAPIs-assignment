@@ -216,6 +216,9 @@ submitBtn.addEventListener("click", function (event) {
         name: nameEntry,
         score: timer,
     }));
+    if (nameEntry === "") {
+        return;
+    };
 });
 
 submitBtn.addEventListener("dblclick", function () {
@@ -231,11 +234,6 @@ completePage.addEventListener("click", function (event) {
 var scoreLog = document.querySelector("#score-output");
 var scoreEl = document.createElement("li");
 
-function logScores() {
-    if () {
-
-    }
-};
 
 
 scoresPage.addEventListener("click", function (event) {
