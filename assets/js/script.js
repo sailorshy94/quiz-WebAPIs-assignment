@@ -217,6 +217,7 @@ submitBtn.addEventListener("click", function (event) {
         score: timer,
     }));
     if (nameEntry === "") {
+        alert("Please enter your name/initials into the text box if you want to save your score.")
         return;
     };
 });
@@ -229,12 +230,6 @@ completePage.addEventListener("click", function (event) {
     playAgain();
     viewScores();
 });
-
-// grabbing scores from local storage and listing on the webpage?
-var scoreLog = document.querySelector("#score-output");
-var scoreEl = document.createElement("li");
-
-
 
 scoresPage.addEventListener("click", function (event) {
     var clearScoresBtn = document.querySelector("#clear");
@@ -267,3 +262,16 @@ function setTimer() {
         }
     }, 1000);
 };
+
+
+// grabbing scores from local storage and listing on the webpage?
+var scoreLog = document.querySelector("#score-output");
+var scoreEl = document.createElement("li");
+
+// function scoreOutput (event, ){
+//     if (event.target.matches === "click"){
+//         console.log("squid");
+//     };
+// };
+
+// scoreEl.appendChild(document.createElement(li));
