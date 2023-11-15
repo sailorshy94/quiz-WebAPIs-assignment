@@ -49,8 +49,17 @@ function showScoresPage() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-    //removed code snippet suggested by tutor 
+//  this works, need to change it into a function that will retrieve value and output to page
+    displayScoreboard();
 };
+
+function displayScoreboard(){
+    console.log(localStorage.getItem(nameVal));
+};
+
+// to display score, can I use appendchild() and create a list element - JSON parse the info from local storage onto the page?
+// .createText?? & feed the values for the scores??
+// scoreEl.appendChild(document.createElement(li));
 
 function showQuestion1() {
     startPage.style.display = "none";
@@ -209,7 +218,8 @@ question6.addEventListener("click", function (event) {
 });
 
 var submitBtn = document.getElementById("submit");
-// var nameVal = document.getElementById("username").value.trim();
+// shadowed var, is this bad????
+var nameVal = document.getElementById("username").value.trim();
 
 submitBtn.addEventListener("click", function (event) {
     var nameVal = document.getElementById("username").value.trim();
@@ -217,21 +227,22 @@ submitBtn.addEventListener("click", function (event) {
         name: nameVal,
         score: timer,
     }));
+
+    // console.log(localStorage.getItem(nameVal));
+
     if (nameVal === "") {
         alert("Please enter your name/initials into the text box if you want to save your score.")
         return;
-    };
+    }
 });
 
 
 submitBtn.addEventListener("dblclick", function () {
     showScoresPage();
+    // console.log(localStorage.getItem(nameVal));
 });
 
-completePage.addEventListener("click", function (event) {
-    // localStorage.getItem(nameVal, JSON.parse({
-
-    // }))
+completePage.addEventListener("click", function (event) {    
     playAgain();
     viewScores();
 });
@@ -268,27 +279,6 @@ function setTimer() {
     }, 1000);
 };
 
-displayScoreboard();
+// displayScoreboard();
 
-// grabbing scores from local storage and listing on the webpage?
-// var scoreLog = document.querySelector("#score-output");
-// var scoreEl = document.createElement("li");
 
-// function scoreOutput (event, ){
-//     if (event.target.matches === "click"){
-//         console.log("squid");
-//     };
-// };
-
-// scoreEl.appendChild(document.createElement(li));
-
-// console.log(displayScoreboard);
-
-// function displayScoreboard() {
-//     localStorage.getItem(name);
-//     localStorage.getItem(score);
-// };
-
-// function displayScoreboard(){
-//     console.log(localStorage.getItem(nameVal));
-// };
