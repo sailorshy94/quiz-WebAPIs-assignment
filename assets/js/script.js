@@ -49,7 +49,7 @@ function showScoresPage() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-//removed code snippet suggested by tutor 
+    //removed code snippet suggested by tutor 
 };
 
 function showQuestion1() {
@@ -211,16 +211,28 @@ question6.addEventListener("click", function (event) {
 var submitBtn = document.getElementById("submit");
 
 submitBtn.addEventListener("click", function (event) {
-    var nameEntry = document.getElementById("name").value.trim();
-    localStorage.setItem(nameEntry, JSON.stringify({
-        name: nameEntry,
+    var nameVal = document.getElementById("username").value.trim();
+    // var scoreVal = document.getElementById("timer");
+    // localStorage.setItem("name", nameEntryVal);
+    // localStorage.setItem("score", scoreVal);
+    // console.log(nameEntryVal);
+    // console.log(scoreVal);
+
+    localStorage.setItem(nameVal, JSON.stringify({
+        name: nameVal,
         score: timer,
     }));
-    if (nameEntry === "") {
+
+    // localStorage.setItem(nameEntry, JSON.stringify({
+    //     name: nameEntry,
+    //     score: timer,
+    // }));
+    if (nameVal === "") {
         alert("Please enter your name/initials into the text box if you want to save your score.")
         return;
     };
 });
+
 
 submitBtn.addEventListener("dblclick", function () {
     showScoresPage();
@@ -236,7 +248,7 @@ scoresPage.addEventListener("click", function (event) {
     clearScoresBtn.addEventListener("click", function (event) {
         localStorage.clear();
     });
-    
+
     playAgain2();
 });
 
@@ -275,3 +287,10 @@ var scoreEl = document.createElement("li");
 // };
 
 // scoreEl.appendChild(document.createElement(li));
+
+// console.log(displayScoreboard);
+
+// function displayScoreboard() {
+//     localStorage.getItem(name);
+//     localStorage.getItem(score);
+// };
