@@ -54,12 +54,10 @@ function showScoresPage() {
 };
 
 function displayScoreboard(){
-    console.log(localStorage.getItem(nameVal));
+    // var scoreBoardEl = localStorage.getItem(nameVal);
+    // var scoreOutput = document.querySelector("#score-output");
+    // scoreOutput.appendChild(document.createElement("li"))
 };
-
-// to display score, can I use appendchild() and create a list element - JSON parse the info from local storage onto the page?
-// .createText?? & feed the values for the scores??
-// scoreEl.appendChild(document.createElement(li));
 
 function showQuestion1() {
     startPage.style.display = "none";
@@ -218,17 +216,19 @@ question6.addEventListener("click", function (event) {
 });
 
 var submitBtn = document.getElementById("submit");
-// shadowed var, is this bad????
 var nameVal = document.getElementById("username").value.trim();
 
 submitBtn.addEventListener("click", function (event) {
     var nameVal = document.getElementById("username").value.trim();
-    localStorage.setItem(nameVal, JSON.stringify({
+    var obj = {
         name: nameVal,
         score: timer,
-    }));
+    };
+    var scores = JSON.parse(localStorage.getItem('scores')) || [];
 
-    // console.log(localStorage.getItem(nameVal));
+    scores.push(obj);
+
+    localStorage.setItem('scores', JSON.stringify(scores));
 
     if (nameVal === "") {
         alert("Please enter your name/initials into the text box if you want to save your score.")
@@ -239,7 +239,6 @@ submitBtn.addEventListener("click", function (event) {
 
 submitBtn.addEventListener("dblclick", function () {
     showScoresPage();
-    // console.log(localStorage.getItem(nameVal));
 });
 
 completePage.addEventListener("click", function (event) {    
@@ -278,7 +277,5 @@ function setTimer() {
         }
     }, 1000);
 };
-
-// displayScoreboard();
 
 
