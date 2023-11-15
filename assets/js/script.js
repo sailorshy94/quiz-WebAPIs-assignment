@@ -209,24 +209,14 @@ question6.addEventListener("click", function (event) {
 });
 
 var submitBtn = document.getElementById("submit");
+// var nameVal = document.getElementById("username").value.trim();
 
 submitBtn.addEventListener("click", function (event) {
     var nameVal = document.getElementById("username").value.trim();
-    // var scoreVal = document.getElementById("timer");
-    // localStorage.setItem("name", nameEntryVal);
-    // localStorage.setItem("score", scoreVal);
-    // console.log(nameEntryVal);
-    // console.log(scoreVal);
-
     localStorage.setItem(nameVal, JSON.stringify({
         name: nameVal,
         score: timer,
     }));
-
-    // localStorage.setItem(nameEntry, JSON.stringify({
-    //     name: nameEntry,
-    //     score: timer,
-    // }));
     if (nameVal === "") {
         alert("Please enter your name/initials into the text box if you want to save your score.")
         return;
@@ -239,6 +229,9 @@ submitBtn.addEventListener("dblclick", function () {
 });
 
 completePage.addEventListener("click", function (event) {
+    // localStorage.getItem(nameVal, JSON.parse({
+
+    // }))
     playAgain();
     viewScores();
 });
@@ -275,10 +268,11 @@ function setTimer() {
     }, 1000);
 };
 
+displayScoreboard();
 
 // grabbing scores from local storage and listing on the webpage?
-var scoreLog = document.querySelector("#score-output");
-var scoreEl = document.createElement("li");
+// var scoreLog = document.querySelector("#score-output");
+// var scoreEl = document.createElement("li");
 
 // function scoreOutput (event, ){
 //     if (event.target.matches === "click"){
@@ -293,4 +287,8 @@ var scoreEl = document.createElement("li");
 // function displayScoreboard() {
 //     localStorage.getItem(name);
 //     localStorage.getItem(score);
+// };
+
+// function displayScoreboard(){
+//     console.log(localStorage.getItem(nameVal));
 // };
