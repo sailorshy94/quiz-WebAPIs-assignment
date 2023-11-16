@@ -12,7 +12,26 @@ var question6 = document.querySelector("#quiz-6");
 var repeatQuizBtn = document.querySelector("#again");
 var repeatQuizBtn2 = document.querySelector("#again-2");
 var highScoresBtn = document.querySelector("#high-scores");
+var submitBtn = document.getElementById("submit");
 
+
+// code for timer
+var timer = 70;
+var timerEl = document.querySelector("#timer");
+var timerInt;
+
+function setTimer() {
+    timerInt = setInterval(function () {
+        console.log(timer);
+        timer--;
+        timerEl.textContent = timer;
+
+        if (timer === 0) {
+            clearInterval();
+            showCompletePage();
+        }
+    }, 1000);
+};
 
 function showStartPage() {
     startPage.style.display = null;
@@ -49,14 +68,15 @@ function showScoresPage() {
     question4.style.display = "none";
     question5.style.display = "none";
     question6.style.display = "none";
-//  this works, need to change it into a function that will retrieve value and output to page
     displayScoreboard();
 };
 
-function displayScoreboard(){
-    // var scoreBoardEl = localStorage.getItem(nameVal);
-    // var scoreOutput = document.querySelector("#score-output");
-    // scoreOutput.appendChild(document.createElement("li"))
+function displayScoreboard() {
+    var highScores = localStorage.getItem('scores', JSON.stringify(scores));
+
+    if (scores !== null) {
+        document.getElementById("score-output").innerHTML = highScores;
+    }
 };
 
 function showQuestion1() {
@@ -149,15 +169,6 @@ function viewScores() {
     })
 };
 
-startScoresPage.addEventListener("click", function (event) {
-    showScoresPage();
-});
-
-beginButton.addEventListener("click", function (event) {
-    setTimer();
-    showQuestion1();
-});
-
 function logAnswer(event, answer) {
     if (event.target.innerHTML === answer) {
         console.log("correct");
@@ -166,6 +177,15 @@ function logAnswer(event, answer) {
         timer -= 15;
     }
 };
+
+startScoresPage.addEventListener("click", function (event) {
+    showScoresPage();
+});
+
+beginButton.addEventListener("click", function (event) {
+    setTimer();
+    showQuestion1();
+});
 
 question1.addEventListener("click", function (event) {
     var answer = "c. when a variable is declared locally and globally";
@@ -215,9 +235,6 @@ question6.addEventListener("click", function (event) {
     showCompletePage();
 });
 
-var submitBtn = document.getElementById("submit");
-var nameVal = document.getElementById("username").value.trim();
-
 submitBtn.addEventListener("click", function (event) {
     var nameVal = document.getElementById("username").value.trim();
     var obj = {
@@ -234,14 +251,11 @@ submitBtn.addEventListener("click", function (event) {
         alert("Please enter your name/initials into the text box if you want to save your score.")
         return;
     }
-});
 
-
-submitBtn.addEventListener("dblclick", function () {
     showScoresPage();
 });
 
-completePage.addEventListener("click", function (event) {    
+completePage.addEventListener("click", function (event) {
     playAgain();
     viewScores();
 });
@@ -260,22 +274,5 @@ function init() {
 }
 
 init();
-
-// code for timer
-var timer = 70;
-var timerEl = document.querySelector("#timer");
-var timerInt;
-
-function setTimer() {
-    timerInt = setInterval(function () {
-        console.log(timer);
-        timer--;
-        timerEl.textContent = timer;
-
-        if (timer === 0) {
-            showCompletePage();
-        }
-    }, 1000);
-};
 
 
